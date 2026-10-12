@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Y.Z.A - Shaheen | Portfolio</title>
-    <!-- استيراد خط عربي أنيق وأيقونات FontAwesome -->
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>𝐒𝐇𝐀𝐇𝐄𝐄𝐍-𝐎𝐒 | Profile Page</title>
+    <!-- استيراد الخطوط والأيقونات -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -21,48 +21,73 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            padding: 20px;
+            padding: 20px 10px;
         }
         .container {
             width: 100%;
-            max-width: 600px;
+            max-width: 750px;
             background: #161b22;
-            padding: 40px 20px;
+            padding: 25px;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
             text-align: center;
             border: 1px solid #30363d;
         }
-        .profile-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            border: 3px solid #ff5722;
+        .header-banner {
+            width: 100%;
+            border-radius: 12px;
             margin-bottom: 20px;
             object-fit: cover;
         }
-        h1 {
-            color: #ffffff;
-            font-size: 26px;
-            margin-bottom: 5px;
-        }
-        p.bio {
-            color: #8b949e;
+        blockquote {
+            background: #21262d;
+            border-right: 4px solid #ff5722;
+            padding: 15px;
+            margin: 15px 0;
+            font-style: italic;
             font-size: 14px;
-            margin-bottom: 30px;
+            color: #8b949e;
+            border-radius: 6px;
+            text-align: right;
+            direction: ltr;
+        }
+        .dev-title {
+            color: #ffffff;
+            font-size: 28px;
+            font-weight: 800;
+            margin: 15px 0;
+            letter-spacing: 1px;
+        }
+        .id-card {
+            width: 100%;
+            max-width: 380px;
+            border-radius: 15px;
+            border: 2px solid #30363d;
+            margin: 15px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+        }
+        .dev-name {
+            color: #ff5722;
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
         }
         .section-title {
-            color: #ff5722;
+            color: #58a6ff;
             font-size: 18px;
-            margin: 25px 0 15px;
+            margin: 30px 0 15px;
             text-align: right;
             border-bottom: 1px solid #30363d;
-            padding-bottom: 5px;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
         .links-grid {
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
             gap: 12px;
+            margin-bottom: 20px;
         }
         .btn {
             display: flex;
@@ -70,43 +95,70 @@
             justify-content: space-between;
             background: #21262d;
             color: #ffffff;
-            padding: 12px 20px;
-            border-radius: 12px;
+            padding: 10px 15px;
+            border-radius: 10px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 14px;
             transition: all 0.3s ease;
             border: 1px solid #30363d;
         }
         .btn:hover {
             background: #30363d;
             transform: translateY(-2px);
-            border-color: #ff5722;
+            border-color: #58a6ff;
         }
         .btn i {
-            font-size: 20px;
-            margin-left: 10px;
+            font-size: 18px;
         }
-        .btn-left {
-            display: flex;
-            align-items: center;
-        }
-        .tech-stack {
+        .badges-container {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
             justify-content: center;
-            margin-top: 10px;
+            margin: 15px 0;
         }
-        .tech-badge {
+        .badges-container img {
+            height: 28px;
+        }
+        /* شبكة الداعمين */
+        .sponsors-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        .sponsor-card {
             background: #21262d;
-            color: #c9d1d9;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 12px;
+            padding: 10px 5px;
+            border-radius: 10px;
             border: 1px solid #30363d;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .sponsor-card img {
+            width: 55px;
+            height: 55px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+        .sponsor-card span {
+            font-size: 11px;
+            color: #c9d1d9;
+            font-weight: 600;
+            text-align: center;
+            word-break: break-word;
+        }
+        .barcode-img {
+            width: 180px;
+            margin-top: 30px;
+            border-radius: 8px;
         }
         .footer {
-            margin-top: 30px;
+            margin-top: 20px;
             font-size: 12px;
             color: #8b949e;
         }
@@ -115,65 +167,111 @@
 <body>
 
     <div class="container">
-        <!-- صورة الملف الشخصي (يمكنك استبدال الرابط برابط صورتك) -->
-        <img src="https://avatars.githubusercontent.com/u/10000000?v=4" alt="Profile Image" class="profile-img">
-        
-        <h1>Y.Z.A - Shaheen</h1>
-        <p class="bio">مطور برمجيات | مهتم بالتقنية وأنظمة الأتمتة</p>
+        <!-- 1. الترويسة الرئيسية -->
+        <img src="https://i.postimg.cc/fTL1SXHn/Picsart-26-10-12-07-38-07-085.png" alt="Header Banner" class="header-banner">
 
-        <!-- روابط وسائل التواصل الاجتماعي -->
-        <div class="section-title"><i class="fa-solid fa-share-nodes"></i> منصات التواصل</div>
-        <div class="links-grid">
-            <a href="https://instagram.com" target="_blank" class="btn">
-                <span class="btn-left"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
-            </a>
-            <a href="https://facebook.com" target="_blank" class="btn">
-                <span class="btn-left"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
-            </a>
-            <a href="https://t.me" target="_blank" class="btn">
-                <span class="btn-left"><i class="fa-brands fa-telegram" style="color: #229ed9;"></i> Telegram</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
-            </a>
-            <a href="https://snapchat.com" target="_blank" class="btn">
-                <span class="btn-left"><i class="fa-brands fa-snapchat" style="color: #fffc00;"></i> Snapchat</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
-            </a>
-            <a href="https://tiktok.com" target="_blank" class="btn">
-                <span class="btn-left"><i class="fa-brands fa-tiktok"></i> TikTok</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
-            </a>
+        <!-- 2. الاقتباس المطور -->
+        <blockquote>
+            "I'm not a phase—I'm the ignition. The old me became fuel for the legend I'm building. Unapologetic, untamed, already inevitable. This is the phase that is me: bold, becoming, impossible to ignore."
+        </blockquote>
+
+        <div class="dev-title">𝐒𝐇𝐀𝐇𝐄𝐄𝐍-𝐎𝐒</div>
+
+        <!-- 3. بطاقة الهوية التعريفية -->
+        <img src="https://files.catbox.moe/bk8tbv.jpg" alt="Developer ID" class="id-card">
+
+        <!-- 4. اسم المطور -->
+        <div class="dev-name">»𝐘𝐎𝐔𝐒𝐄𝐅 𝐙. 𝐀. 𝐒𝐇𝐀𝐇𝐄𝐄𝐍«</div>
+
+        <!-- 5. الشارات المميزة -->
+        <div class="badges-container">
+            <img src="https://img.shields.io/badge/PROFILE%20VIEWS-1.2K-lightgrey?style=for-the-badge&logo=github" alt="Views">
+            <img src="https://img.shields.io/badge/COLOR%20NOT%20VALID-GOLD-orange?style=for-the-badge" alt="Gold">
+            <img src="https://img.shields.io/badge/FOLLOWERS-0-yellow?style=for-the-badge&logo=github" alt="Followers">
+            <img src="https://img.shields.io/badge/STARS-0-yellow?style=for-the-badge&logo=github" alt="Stars">
+            <img src="https://img.shields.io/badge/OPEN%20SOURCE-YES-brightgreen?style=for-the-badge&logo=open-source-initiative" alt="OpenSource">
         </div>
 
-        <!-- البريد الإلكتروني -->
+        <!-- 6. وسائل التواصل الاجتماعي -->
+        <div class="section-title"><i class="fa-solid fa-share-nodes"></i> منصات التواصل والتواصل الاجتماعي</div>
+        <div class="links-grid">
+            <a href="https://www.instagram.com/_55.0_?cplk=cGNucHY5bzlxYzl0" target="_blank" class="btn"><span><i class="fa-brands fa-instagram" style="color:#e1306c;"></i> Instagram</span></a>
+            <a href="https://www.tiktok.com/@zix8ii?_r=1&_d=f3c01a6371bii9&sec_uid=" target="_blank" class="btn"><span><i class="fa-brands fa-tiktok"></i> TikTok</span></a>
+            <a href="https://www.facebook.com/share/19u4QUKFTL/" target="_blank" class="btn"><span><i class="fa-brands fa-facebook" style="color:#1877f2;"></i> Facebook</span></a>
+            <a href="https://wa.link/lc6f5w" target="_blank" class="btn"><span><i class="fa-brands fa-whatsapp" style="color:#25d366;"></i> WhatsApp</span></a>
+            <a href="https://t.me/B0SS_0" target="_blank" class="btn"><span><i class="fa-brands fa-telegram" style="color:#229ed9;"></i> Telegram</span></a>
+            <a href="https://www.snapchat.com/add/fi1_oo?share_id=ez2rePla17Q&locale=ar-JO" target="_blank" class="btn"><span><i class="fa-brands fa-snapchat" style="color:#fffc00;"></i> Snapchat</span></a>
+            <a href="https://www.threads.com/@1.0_v_?invite=0" target="_blank" class="btn"><span><i class="fa-brands fa-threads"></i> Threads</span></a>
+            <a href="https://x.com/You_sh94" target="_blank" class="btn"><span><i class="fa-brands fa-x-twitter"></i> X</span></a>
+            <a href="https://www.linkedin.com/in/yousef-z-445aba414" target="_blank" class="btn"><span><i class="fa-brands fa-linkedin" style="color:#0a66c2;"></i> LinkedIn</span></a>
+            <a href="https://discord.gg/kgwKFPTmZE" target="_blank" class="btn"><span><i class="fa-brands fa-discord" style="color:#5865f2;"></i> Discord</span></a>
+        </div>
+
+        <!-- 7. البريد الإلكتروني -->
         <div class="section-title"><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</div>
         <div class="links-grid">
-            <a href="mailto:yza.1994s@gmail.com" class="btn">
-                <span class="btn-left"><i class="fa-solid fa-paper-plane" style="color: #ea4335;"></i> yza.1994s@gmail.com</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
-            </a>
-            <a href="mailto:shaheen94s@outlook.com" class="btn">
-                <span class="btn-left"><i class="fa-solid fa-envelope-open-text" style="color: #0078d4;"></i> shaheen94s@outlook.com</span>
-                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
-            </a>
+            <a href="mailto:shaheen.group000@gmail.com" class="btn"><span><i class="fa-solid fa-paper-plane" style="color:#ea4335;"></i> Gmail</span></a>
+            <a href="mailto:shaheen.group000@yahoo.com" class="btn"><span><i class="fa-solid fa-envelope-open-text" style="color:#6001d2;"></i> Yahoo</span></a>
         </div>
 
-        <!-- التقنيات -->
-        <div class="section-title"><i class="fa-solid fa-code"></i> التقنيات والأدوات</div>
-        <div class="tech-stack">
-            <span class="tech-badge">Python</span>
-            <span class="tech-badge">Linux</span>
-            <span class="tech-badge">Termux</span>
-            <span class="tech-badge">HTML5</span>
-            <span class="tech-badge">CSS3</span>
-            <span class="tech-badge">JavaScript</span>
-            <span class="tech-badge">Git</span>
-            <span class="tech-badge">Cloudflare</span>
+        <!-- 8. التقنيات والأدوات -->
+        <div class="section-title"><i class="fa-solid fa-code"></i> التقنيات والأنظمة</div>
+        <div class="badges-container">
+            <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux">
+            <img src="https://img.shields.io/badge/Termux-000000?style=for-the-badge&logo=gnu-bash&logoColor=white" alt="Termux">
+            <img src="https://img.shields.io/badge/Cloudflare-F38020?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Cloudflare">
         </div>
+
+        <!-- 9. قسم الداعمين والرعاة المنسق -->
+        <div class="section-title"><i class="fa-solid fa-handshake"></i> الداعمين والرعاة (Sponsors & Backers)</div>
+        <div class="sponsors-grid">
+            <div class="sponsor-card"><img src="https://i.postimg.cc/8CpcCWDX/624f20c40a866a31160974e9bb66f825.jpg"><span>Nike</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/zXhV280b/354d97a7b1fae5c4d3f5bd2ca8239e0c.jpg"><span>Adidas</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/K8r4FQXF/531bdfd5b13380fa025df6e3dcc7a5a4.jpg"><span>GitHub</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/NLvfv2ps/1300958f5e61f8dc04b26def02f151e7.jpg"><span>Mercedes</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/3w8Cmn27/1697573c79beb1da691f0ff3d9a1d6f9.jpg"><span>BMW</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/qBSLScd0/dfb42e975730f34ecb8e4530fdeb9517.jpg"><span>WWE</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/NMMNrD8Q/IMG-20260918-165809-218.jpg"><span>Shaheen Group</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/sDDG2T3C/48d07959f62c16600e2916fb7f65ff2d.jpg"><span>Bentley</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/prk9ZFY1/2a8ae308237b2e7b42f05bb4bfde7b44.jpg"><span>Dodge</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/6qH3RNBv/cc10757a8c6fbbeaabf06f15cb59619b.jpg"><span>GMC</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/kG5M7hKY/85fdcd7b3fd17b94d56d551dc12781f7.jpg"><span>KFC</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/FzKFhn0F/baec0b0439b75a381a538e448a06cada.jpg"><span>LEVI'S</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/6qQ6B1Cp/76dbf693e1a621efd1838af81cf9067f.jpg"><span>LACOST</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/KvPKQCQB/2a1ac49de00d3aef281f22105860b533.jpg"><span>Bugatti</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/d1Z3CfLL/69d82ee77bd68993db195bfb996f06c9.jpg"><span>VOLVO</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/CLs1bkL7/e26db36a76cdce30e76389eb8b401756.jpg"><span>Ferrari</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/Z5f5MmNH/d2013c42bfc73cfa6a46622f0490a09b.jpg"><span>Versace</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/6Qg5BhYC/f8ad12dbdc498a6c1fc5fad107d58185.jpg"><span>Rolls Royce</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/QCMNjnc8/e631f36b7c23da10fb35bb103c62c714.jpg"><span>GUCCI</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/rmjFXL01/912304cd6edc87a80b335ed5dc4bd04b.jpg"><span>Jaguar</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/J0h7RdZP/02288e4fa6ad7363b427170e321a3001.jpg"><span>Sega</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/ZKMQ7DR0/596da4fe6b6c7a9991ae55a6b4f8f6ee.jpg"><span>Corvette</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/26G8RfbX/8805ac62658b68c79f8acc2c9466eef2.jpg"><span>Universal</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/sXmDdRQc/b3cb4f64f4f525bf7fc78af277ad071f.jpg"><span>MGM</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/3R1J5H4S/46f3ae875275a412a749968b3da81521.jpg"><span>Marvel</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/k4sX3d6j/e6016aae17003fe21ec0b1d7e4015017.jpg"><span>Spotify</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/X7d2LNR3/1471d11116421b5d6606b24be5a56c58.jpg"><span>Audi</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/9f810D7j/771f7023edb5df87307147b25d453262.jpg"><span>Porsche</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/W14k3X60/60d95e340b4649ddde09b47b832c3978.jpg"><span>Aston Martin</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/SRKQmtCt/3247db84de6bbe3f203c9ee046b370cc.jpg"><span>Pizza Hut</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/brFyrHRc/bb608f65886d50bb9a4624ba3d37a52b.jpg"><span>Hermes</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/D0zf7Y13/da052f841de21ad85925fb9988915193.jpg"><span>Chicago</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/cLZNMb5Y/d6008cfc5d3dec0ae226e180dfe80eae.jpg"><span>Range Rover</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/fybWMgYs/16d9827323c509fb481973bcf4a6f069.jpg"><span>Chanel</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/prKhqgd3/IMG-20261012-040734-520.jpg"><span>Kali Linux</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/02dKmRF0/IMG-20261012-040719-330.jpg"><span>Claude</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/fbkV63L0/IMG-20261012-040704-792.jpg"><span>Ubuntu</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/pd7mx2hw/IMG-20261012-040659-648.jpg"><span>Nova</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/Hn1jcBt4/IMG-20261012-040650-065.jpg"><span>OpenAI</span></div>
+            <div class="sponsor-card"><img src="https://i.postimg.cc/tJdJhWSy/IMG-20261012-040711-926.jpg"><span>Lenovo</span></div>
+        </div>
+
+        <!-- 10. صورة الباركود الختامية -->
+        <img src="https://i.postimg.cc/SKNgHbwn/Picsart-26-10-12-07-21-57-038.png" alt="Barcode" class="barcode-img">
 
         <div class="footer">
-            © 2026 Y.Z.A - Shaheen. All Rights Reserved.
+            Designed & Maintained by Yousef Z. A. Shaheen © 2026
         </div>
     </div>
 
