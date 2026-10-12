@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Y.Z.A - Shaheen | Portfolio</title>
+    <!-- استيراد خط عربي أنيق وأيقونات FontAwesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
+        body {
+            background-color: #0d1117;
+            color: #c9d1d9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background: #161b22;
+            padding: 40px 20px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            border: 1px solid #30363d;
+        }
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid #ff5722;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        h1 {
+            color: #ffffff;
+            font-size: 26px;
+            margin-bottom: 5px;
+        }
+        p.bio {
+            color: #8b949e;
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
+        .section-title {
+            color: #ff5722;
+            font-size: 18px;
+            margin: 25px 0 15px;
+            text-align: right;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 5px;
+        }
+        .links-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #21262d;
+            color: #ffffff;
+            padding: 12px 20px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid #30363d;
+        }
+        .btn:hover {
+            background: #30363d;
+            transform: translateY(-2px);
+            border-color: #ff5722;
+        }
+        .btn i {
+            font-size: 20px;
+            margin-left: 10px;
+        }
+        .btn-left {
+            display: flex;
+            align-items: center;
+        }
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 10px;
+        }
+        .tech-badge {
+            background: #21262d;
+            color: #c9d1d9;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            border: 1px solid #30363d;
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 12px;
+            color: #8b949e;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- صورة الملف الشخصي (يمكنك استبدال الرابط برابط صورتك) -->
+        <img src="https://avatars.githubusercontent.com/u/10000000?v=4" alt="Profile Image" class="profile-img">
+        
+        <h1>Y.Z.A - Shaheen</h1>
+        <p class="bio">مطور برمجيات | مهتم بالتقنية وأنظمة الأتمتة</p>
+
+        <!-- روابط وسائل التواصل الاجتماعي -->
+        <div class="section-title"><i class="fa-solid fa-share-nodes"></i> منصات التواصل</div>
+        <div class="links-grid">
+            <a href="https://instagram.com" target="_blank" class="btn">
+                <span class="btn-left"><i class="fa-brands fa-instagram" style="color: #e1306c;"></i> Instagram</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
+            </a>
+            <a href="https://facebook.com" target="_blank" class="btn">
+                <span class="btn-left"><i class="fa-brands fa-facebook" style="color: #1877f2;"></i> Facebook</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
+            </a>
+            <a href="https://t.me" target="_blank" class="btn">
+                <span class="btn-left"><i class="fa-brands fa-telegram" style="color: #229ed9;"></i> Telegram</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
+            </a>
+            <a href="https://snapchat.com" target="_blank" class="btn">
+                <span class="btn-left"><i class="fa-brands fa-snapchat" style="color: #fffc00;"></i> Snapchat</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
+            </a>
+            <a href="https://tiktok.com" target="_blank" class="btn">
+                <span class="btn-left"><i class="fa-brands fa-tiktok"></i> TikTok</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
+            </a>
+        </div>
+
+        <!-- البريد الإلكتروني -->
+        <div class="section-title"><i class="fa-solid fa-envelope"></i> البريد الإلكتروني</div>
+        <div class="links-grid">
+            <a href="mailto:yza.1994s@gmail.com" class="btn">
+                <span class="btn-left"><i class="fa-solid fa-paper-plane" style="color: #ea4335;"></i> yza.1994s@gmail.com</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
+            </a>
+            <a href="mailto:shaheen94s@outlook.com" class="btn">
+                <span class="btn-left"><i class="fa-solid fa-envelope-open-text" style="color: #0078d4;"></i> shaheen94s@outlook.com</span>
+                <i class="fa-solid fa-chevron-left" style="font-size: 12px; color: #8b949e;"></i>
+            </a>
+        </div>
+
+        <!-- التقنيات -->
+        <div class="section-title"><i class="fa-solid fa-code"></i> التقنيات والأدوات</div>
+        <div class="tech-stack">
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Linux</span>
+            <span class="tech-badge">Termux</span>
+            <span class="tech-badge">HTML5</span>
+            <span class="tech-badge">CSS3</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Git</span>
+            <span class="tech-badge">Cloudflare</span>
+        </div>
+
+        <div class="footer">
+            © 2026 Y.Z.A - Shaheen. All Rights Reserved.
+        </div>
+    </div>
+
+</body>
+</html>
